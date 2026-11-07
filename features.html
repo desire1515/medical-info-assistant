@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the features, safety gate, and urgency levels of the Intelligent Medical Information Assistant.">
+  <meta name="theme-color" content="#f4f8fb">
+  <title>Features &amp; Live Demo | Intelligent Medical Information Assistant</title>
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("mia-theme");
+        if (theme !== "light" && theme !== "dark") {
+          theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      }
+    })();
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230d4f6c'/%3E%3Cpath d='M17 8h6v9h9v6h-9v9h-6v-9H8v-6h9z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="site-nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Medical Info Assistant home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M20 9h8v11h11v8H28v11h-8V28H9v-8h11z" fill="#fff"/></svg></span>
+        <span>Medical Info Assistant</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <div class="nav-links">
+          <a href="index.html" data-nav="index.html">Home</a>
+          <a href="features.html" data-nav="features.html">Features</a>
+          <a href="about.html" data-nav="about.html">About</a>
+        </div>
+        <a class="button button-nav" href="project/index.html">Launch Assistant <span aria-hidden="true">→</span></a>
+      </div>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"/></svg>
+      </button>
+    </nav>
+  </header>
+  <button class="menu-backdrop" type="button" aria-label="Close navigation menu" tabindex="-1"></button>
+
+  <section class="page-heading about-hero" data-reveal>
+    <div class="container">
+      <span class="eyebrow">CAPABILITIES</span>
+      <h1>Features &amp; Live Demo</h1>
+      <p>A focused tour of the assistant’s transparent rules, safety-first flow, and design.</p>
+    </div>
+  </section>
+
+  <main id="main-content" class="container page-main">
+    </section>
+
+    <section class="content-section" aria-labelledby="features-heading">
+      <div class="section-title-row">
+        <div><span class="section-kicker">Built around clarity</span><h2 id="features-heading">What the tool does</h2></div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 8h18M7 16h18M7 24h18"/><circle cx="12" cy="8" r="2"/><circle cx="21" cy="16" r="2"/><circle cx="15" cy="24" r="2"/></svg></span>
+          <h3>Transparent rule engine</h3><p>Predefined conditions are evaluated in a clear, reviewable priority order.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon emergency-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 4 29 27H3L16 4Z"/><path d="M16 12v7m0 4v.1"/></svg></span>
+          <h3>Emergency safety gate</h3><p>Any selected emergency warning sign overrides every other rule.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 6h22v16H15l-7 5v-5H5z"/><path d="M10 12h12m-12 5h8"/></svg></span>
+          <h3>Explainable recommendations</h3><p>Each result shares the reason associated with its matching rule.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 4 27 8v7c0 7-5 11-11 13C10 26 5 22 5 15V8z"/><path d="m11 16 3 3 7-7"/></svg></span>
+          <h3>No diagnosis, no prescriptions</h3><p>The tool only provides general navigation and does not suggest conditions or medicines.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="8" y="3" width="16" height="26" rx="3"/><path d="M13 7h6m-5 18h4"/></svg></span>
+          <h3>Mobile-first design</h3><p>Responsive layouts and keyboard-accessible controls support use across screen sizes.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="8" rx="10" ry="4"/><path d="M6 8v7c0 2 4 4 10 4s10-2 10-4V8m-20 7v8c0 2 4 4 10 4s10-2 10-4v-8"/></svg></span>
+          <h3>No personal data stored</h3><p>Selections stay in the current browser page and are not saved or sent to a server.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section safety-section" id="safety" aria-labelledby="gate-heading">
+      <div class="section-title-row">
+        <div><span class="section-kicker">Safety before matching</span><h2 id="gate-heading">How the safety gate works</h2></div>
+      </div>
+      <div class="flow-grid">
+        <article class="flow-card" data-reveal><span class="flow-number">01</span><h3>User selects symptoms</h3><p>Selections include emergency warning signs and general symptoms.</p></article>
+        <article class="flow-card flow-emergency" data-reveal><span class="flow-number">02</span><h3>Emergency rule is checked first</h3><p>If any red-flag symptom is selected, the emergency result overrides all other rules.</p></article>
+        <article class="flow-card" data-reveal><span class="flow-number">03</span><h3>Other rules are compared</h3><p>Otherwise, matches are evaluated by priority and the top match is shown.</p></article>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="urgency-heading">
+      <div class="section-title-row">
+        <div><span class="section-kicker">Result categories</span><h2 id="urgency-heading">The four urgency levels</h2></div>
+      </div>
+      <div class="urgency-grid">
+        <article class="urgency-card urgency-red" data-reveal><span class="urgency-label">EMERGENCY</span><p>Seek urgent care at the nearest health facility now.</p></article>
+        <article class="urgency-card urgency-orange" data-reveal><span class="urgency-label">SEE A CLINICIAN SOON</span><p>Contact a health worker soon for an assessment (within 1–2 days as described by this prototype).</p></article>
+        <article class="urgency-card urgency-blue" data-reveal><span class="urgency-label">ROUTINE APPOINTMENT</span><p>Arrange a routine appointment when convenient.</p></article>
+        <article class="urgency-card urgency-grey" data-reveal><span class="urgency-label">GENERAL GUIDANCE</span><p>Monitor your symptoms and consult a health worker if concerned.</p></article>
+      </div>
+      <p class="caveat-note">Urgency labels are general navigation categories, not a clinical triage assessment. Do not delay emergency care to use this tool.</p>
+    </section>
+
+    <section class="dark-demo features-demo">
+      <div class="container demo-grid">
+        <div class="demo-copy reveal"><span class="section-kicker">Hands-on demonstration</span><h2>Try it yourself</h2><p>Use the live assistant to select example symptoms and see the safety gate and rule explanations in action.</p><p class="privacy-note"><span aria-hidden="true">✓</span> Runs in your browser; your selections are not saved or transmitted.</p>
+          <div class="button-row"><a class="button button-accent" href="project/index.html">Launch Live Assistant <span aria-hidden="true">→</span></a><a class="dark-text-link" href="https://github.com/desire1515/medical-info-assistant">View source on GitHub <span aria-hidden="true">→</span></a></div>
+        </div>
+        <div class="demo-note reveal"><span aria-hidden="true">+</span><strong>Transparent rules.</strong><p>Recommendations include a clear reason and a reminder that qualified care matters.</p></div>
+      </div>
+    </section>
+
+    <section class="disclaimer-strip disclaimer-inline" aria-label="Health information disclaimer">
+      <div class="disclaimer-content"><span class="disclaimer-icon" aria-hidden="true">ⓘ</span><p><strong>Important:</strong> This educational tool provides general information only. It does not diagnose or replace a qualified health worker. In an emergency, seek care at your nearest health facility immediately.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand brand-light" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M20 9h8v11h11v8H28v11h-8V28H9v-8h11z" fill="#fff"/></svg></span><span>Medical Info Assistant</span></a></div>
+      <div class="footer-column"><strong>Portfolio</strong><a href="index.html">Home</a><a href="features.html">Features</a><a href="about.html">About</a></div>
+      <div class="footer-column"><strong>Project</strong><a href="project/index.html">Live Assistant</a><a href="https://github.com/desire1515/medical-info-assistant">GitHub Repo</a><a href="about.html#knowledge-heading">Rules</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Medical Information Assistant</span><span>Built with HTML, CSS &amp; Vanilla JS · Deployed on GitHub Pages</span></div>
+  </footer>
+  <script defer src="portfolio.js"></script>
+</body>
+</html>

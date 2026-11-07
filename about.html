@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Technical details, transparent rules, and safety information for the Intelligent Medical Information Assistant.">
+  <meta name="theme-color" content="#f4f8fb">
+  <title>About this Project | Intelligent Medical Information Assistant</title>
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("mia-theme");
+        if (theme !== "light" && theme !== "dark") {
+          theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      }
+    })();
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230d4f6c'/%3E%3Cpath d='M17 8h6v9h9v6h-9v9h-6v-9H8v-6h9z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="site-nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Medical Info Assistant home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M20 9h8v11h11v8H28v11h-8V28H9v-8h11z" fill="#fff"/></svg></span>
+        <span>Medical Info Assistant</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <div class="nav-links">
+          <a href="index.html" data-nav="index.html">Home</a>
+          <a href="features.html" data-nav="features.html">Features</a>
+          <a href="about.html" data-nav="about.html">About</a>
+        </div>
+        <a class="button button-nav" href="project/index.html">Launch Assistant <span aria-hidden="true">→</span></a>
+      </div>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"/></svg>
+      </button>
+    </nav>
+  </header>
+  <button class="menu-backdrop" type="button" aria-label="Close navigation menu" tabindex="-1"></button>
+
+  <section class="page-heading about-hero" data-reveal>
+    <div class="container">
+      <span class="eyebrow">TRANSPARENCY</span>
+      <h1>About this Project</h1>
+      <p>A small client-side system demonstrating transparent, rule-based health information and navigation.</p>
+    </div>
+  </section>
+
+  <main id="main-content" class="container page-main">
+    </section>
+
+    <section class="content-section detail-card" aria-labelledby="how-heading" data-reveal>
+      <span class="section-kicker">System overview</span>
+      <h2 id="how-heading">How it works</h2>
+      <p>The portfolio is built with semantic HTML, CSS, and vanilla JavaScript. The assistant uses JavaScript to read a JSON-style structured knowledge base, compare selected options with predefined rules, and render the matching general guidance. It does not use a server, framework, or machine-learning model.</p>
+      <div class="architecture" aria-label="System flow: user interface leads to rule engine, knowledge base, then result">
+        <div class="architecture-node"><span class="architecture-icon" aria-hidden="true">▤</span><span>01</span><strong>UI</strong><small>Selections</small></div>
+        <span class="architecture-arrow" aria-hidden="true"><svg viewBox="0 0 32 16"><path d="M2 8h26m-7-6 7 6-7 6"/></svg></span>
+        <div class="architecture-node"><span class="architecture-icon" aria-hidden="true">⌘</span><span>02</span><strong>Rule Engine</strong><small>Priority match</small></div>
+        <span class="architecture-arrow" aria-hidden="true"><svg viewBox="0 0 32 16"><path d="M2 8h26m-7-6 7 6-7 6"/></svg></span>
+        <div class="architecture-node"><span class="architecture-icon" aria-hidden="true">▦</span><span>03</span><strong>Knowledge Base</strong><small>Conditions</small></div>
+        <span class="architecture-arrow" aria-hidden="true"><svg viewBox="0 0 32 16"><path d="M2 8h26m-7-6 7 6-7 6"/></svg></span>
+        <div class="architecture-node architecture-result"><span class="architecture-icon" aria-hidden="true">✓</span><span>04</span><strong>Result</strong><small>Next step</small></div>
+      </div>
+    </section>
+
+    <section class="content-section detail-card table-card" aria-labelledby="knowledge-heading" data-reveal>
+      <div class="section-title-row">
+        <div><span class="section-kicker">Review the rules</span><h2 id="knowledge-heading">The knowledge base</h2><p>The full source is at <code>project/js/knowledge-base.js</code>.</p></div>
+        <span class="table-count" id="rule-count"></span>
+      </div>
+      <div class="table-wrap">
+        <table class="rules-table">
+          <caption>Rules in evaluation priority order</caption>
+          <thead><tr><th scope="col">Priority</th><th scope="col">Rule ID</th><th scope="col">Urgency</th><th scope="col">Action</th><th scope="col">Reason</th></tr></thead>
+          <tbody id="rules-table-body"></tbody>
+        </table>
+      </div>
+      <p class="table-note">The emergency safety gate is checked before all other matching rules.</p>
+    </section>
+
+    <section class="content-section detail-card" aria-labelledby="safety-heading" data-reveal>
+      <span class="section-kicker">Built-in boundaries</span><h2 id="safety-heading">Safety safeguards</h2>
+      <ul class="safety-list">
+        <li><span aria-hidden="true">✓</span><div><strong>Emergency first</strong><p>Emergency safety gate overrides all other rules.</p></div></li>
+        <li><span aria-hidden="true">✓</span><div><strong>Non-diagnostic</strong><p>No diagnostic language anywhere in the UI or code.</p></div></li>
+        <li><span aria-hidden="true">✓</span><div><strong>Visible disclaimers</strong><p>Disclaimers are visible on every page and under every result.</p></div></li>
+        <li><span aria-hidden="true">✓</span><div><strong>Privacy by design</strong><p>No personal health data is stored, transmitted, or logged.</p></div></li>
+      </ul>
+    </section>
+
+    <section class="content-section detail-card resource-card" aria-labelledby="sources-heading" data-reveal>
+      <span class="section-kicker">Further reading</span><h2 id="sources-heading">Data sources &amp; references</h2>
+      <p>The simplified rules in this prototype are predefined for demonstration and are not a clinical guideline. For general health information and public guidance, consult the <a href="https://www.who.int/">World Health Organization</a> and the <a href="https://www.health.gov.mw/">Malawi Ministry of Health</a> through their official homepages.</p>
+    </section>
+
+    <section class="content-section detail-card resource-card" aria-labelledby="local-heading" data-reveal>
+      <span class="section-kicker">Malawi context</span><h2 id="local-heading">Local resources (Malawi)</h2>
+      <p>People may contact a Health Surveillance Assistant or local health worker, or visit a health centre or district hospital. Chipatala Cha Pa Foni may be available in some locations. Availability may vary — confirm with official sources.</p>
+    </section>
+
+    <section class="content-section project-links-section" aria-labelledby="links-heading">
+      <div class="section-title-row"><div><span class="section-kicker">Explore the deliverables</span><h2 id="links-heading">Project links</h2><p>Browse the source, this portfolio, or launch the separate working assistant.</p></div></div>
+      <div class="project-link-buttons">
+        <a class="project-link-card link-emergency" href="https://github.com/desire1515/medical-info-assistant"><span class="project-link-icon" aria-hidden="true">⌘</span><span><strong>GitHub Repository</strong><small>Browse project source</small></span><span class="link-arrow" aria-hidden="true">→</span></a>
+        <a class="project-link-card link-accent" href="https://desire1515.github.io/medical-info-assistant/"><span class="project-link-icon" aria-hidden="true">◉</span><span><strong>Live Portfolio</strong><small>View project overview</small></span><span class="link-arrow" aria-hidden="true">→</span></a>
+        <a class="project-link-card link-warm" href="project/index.html"><span class="project-link-icon" aria-hidden="true">↗</span><span><strong>Live Assistant</strong><small>Open the working tool</small></span><span class="link-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="content-section full-disclaimer" aria-labelledby="disclaimer-heading" data-reveal>
+      <span class="warning-symbol" aria-hidden="true">!</span>
+      <div><span class="section-kicker">Please read</span><h2 id="disclaimer-heading">Full disclaimer</h2><p>This educational prototype provides general health information and care-navigation suggestions only. It is not a medical device, does not provide a diagnosis, and is not a substitute for an individual assessment or advice from a qualified health worker. Its rules are simplified and may not cover your situation. Do not delay seeking urgent or emergency care to use this website. If you are concerned, contact a qualified local health worker or visit a health facility. No personal health information is stored or transmitted by this site.</p></div>
+    </section>
+  </main>
+
+  <section class="disclaimer-strip disclaimer-inline" aria-label="Health information disclaimer"><div class="disclaimer-content"><span class="disclaimer-icon" aria-hidden="true">ⓘ</span><p><strong>Important:</strong> This educational tool provides general information only. It does not diagnose or replace a qualified health worker. In an emergency, seek care at your nearest health facility immediately.</p></div></section>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand brand-light" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M20 9h8v11h11v8H28v11h-8V28H9v-8h11z" fill="#fff"/></svg></span><span>Medical Info Assistant</span></a></div>
+      <div class="footer-column"><strong>Portfolio</strong><a href="index.html">Home</a><a href="features.html">Features</a><a href="about.html">About</a></div>
+      <div class="footer-column"><strong>Project</strong><a href="project/index.html">Live Assistant</a><a href="https://github.com/desire1515/medical-info-assistant">GitHub Repo</a><a href="#knowledge-heading">Rules</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Medical Information Assistant</span><span>Built with HTML, CSS &amp; Vanilla JS · Deployed on GitHub Pages</span></div>
+  </footer>
+  <script defer src="project/js/knowledge-base.js"></script>
+  <script defer src="portfolio.js"></script>
+</body>
+</html>
